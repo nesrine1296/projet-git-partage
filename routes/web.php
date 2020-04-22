@@ -14,3 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 route::get("/","UserController@index");
+
+route::resource("/projets","ProjetController");
+route::resource("/taches","TacheController");
