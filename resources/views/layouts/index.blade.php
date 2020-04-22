@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Relation one to many projet github</title>
     <link rel="stylesheet" href="/css/app.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine%22%3E">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cabin Sketch">
     <style>
       body {
-        font-family: 'Tangerine', serif;
+        font-family: 'Cabin Sketch', serif;
         font-size: 20px;
       }
     </style>

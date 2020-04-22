@@ -12,8 +12,10 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-route::resource("/","UserController");
+route::get('/',function(){
+    return view('welcome');
+});
+route::resource("/users","UserController");
 
 route::resource("/projets","ProjetController");
 route::resource("/taches","TacheController");
