@@ -6,22 +6,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Relation one to many projet github</title>
     <link rel="stylesheet" href="/css/app.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine%22%3E">
+    <style>
+      body {
+        font-family: 'Tangerine', serif;
+        font-size: 20px;
+      }
+    </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-5">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link text-success" href="/">Users</a>
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item mr-2">
+              <a class="nav-link text-light" href="/"> <h2>Users</h2></a>
+            </li>
+            <li class="nav-item mr-2">
+              <a class="nav-link text-light" href="/projets"><h2>Projets</h2></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-primary" href="/projets">projets</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-danger" href="/taches">taches</a>
+              <a class="nav-link text-light" href="/taches"><h2>Taches</h2></a>
             </li>
           </ul>
         </div>
