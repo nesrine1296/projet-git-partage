@@ -34,3 +34,5 @@
         <form class="text-center" action="/users/create">@csrf<button class="btn-success btn mt-4" type="submit">create</button> </form>
 </div>
 @endsection
+
+
