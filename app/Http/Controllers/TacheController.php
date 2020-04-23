@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Tache;
+use App\Projet;
 use Illuminate\Http\Request;
 
 class TacheController extends Controller {
@@ -24,7 +25,8 @@ class TacheController extends Controller {
     */
 
     public function create() {
-        //
+        $projets = Projet::all();
+        return view( 'create.createtache', compact( 'projets' ) );
     }
 
     /**
@@ -35,7 +37,12 @@ class TacheController extends Controller {
     */
 
     public function store( Request $request ) {
-        //
+        $tache = new Tache();
+        $tache->nom = request( 'nom' );
+        $tache->description = request( 'description' );
+        $tache->projet_id = request( 'projet_id' );
+        $tache->save();
+        return redirect()->route( 'taches.index' );
     }
 
     /**
@@ -57,7 +64,8 @@ class TacheController extends Controller {
     */
 
     public function edit( Tache $tache ) {
-        //
+        $projets = Projet::all();
+        return view( 'edit.edittache', compact( 'tache','projets' ) );
     }
 
     /**
@@ -69,7 +77,11 @@ class TacheController extends Controller {
     */
 
     public function update( Request $request, Tache $tache ) {
-        //
+        $tache->nom = request( 'nom' );
+        $tache->description = request( 'description' );
+        $tache->projet_id = request( 'projet_id' );
+        $tache->save();
+        return redirect()->route( 'taches.index' );
     }
 
     /**
@@ -79,7 +91,8 @@ class TacheController extends Controller {
     * @return \Illuminate\Http\Response
     */
 
-    public function destroy( Tache $tache ) {
-        //
+    public function destroy( Tache $tache,$id ) {
+        Tache::find($id)->delete();
+        return redirect()->back();
     }
 }
