@@ -63,7 +63,8 @@ class TacheController extends Controller {
     * @return \Illuminate\Http\Response
     */
 
-    public function edit( Tache $tache ) {
+    public function edit( $id ) {
+        $tache = Tache::find($id);
         $projets = Projet::all();
         return view( 'edit.edittache', compact( 'tache','projets' ) );
     }
@@ -76,7 +77,8 @@ class TacheController extends Controller {
     * @return \Illuminate\Http\Response
     */
 
-    public function update( Request $request, Tache $tache ) {
+    public function update( Request $request, $id ) {
+        $tache = Tache::find($id);
         $tache->nom = request( 'nom' );
         $tache->description = request( 'description' );
         $tache->projet_id = request( 'projet_id' );

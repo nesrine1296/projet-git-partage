@@ -3,6 +3,7 @@
 @section('content')
 <h1 class="text-center m-5">Projet Create</h1>
 <div class="text-center">
+    @if (isset($users[0]))
     <form action="/projets" method="post">
         @csrf
         <div class="form-group">
@@ -23,5 +24,9 @@
         </div>
         <button class=" btn btn-success" type="submit">Ajouter Projet</button>
     </form>
+    @else
+    <h1 class="text-danger">Il n'y pas encore d'utilisateur</h1>
+    <form class="text-center" action="{{route('users.create')}}">@csrf<button class="btn-success btn mt-4" type="submit"><h1>Cliquez ici si vous voulez créer un utilisateur </h1></button> </form>
+    @endif
 </div>
 @endsection

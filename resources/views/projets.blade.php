@@ -1,7 +1,7 @@
 @extends('layouts.index')
 @section('content')
 <div class="container">
-        <h3 class="text-center mb-4">projets</h3>
+        <h2 class="text-center mb-4">Projets</h2>
         @foreach ($projets as $projet)
         <div class="row ">
             
@@ -24,14 +24,14 @@
                     <div class="col-4">
                         <form  action="projets/{{$projet->id}}/edit">
                             @csrf
-                            <button class="btn-warning btn mt-4" type="submit">update</button> 
+                            <button class="btn-warning btn mt-4" type="submit">Update</button> 
                         </form>
                     </div>
                     {{-- btn show --}}
                     <div class="col-4">
                         <form  action="projets/{{$projet->id}}">
                             @csrf
-                            <button class="btn-primary btn mt-4" type="submit">show</button> 
+                            <button class="btn-primary btn mt-4" type="submit">Show</button> 
                         </form>
                     </div>
                 </div>
@@ -39,6 +39,6 @@
         </div>
         @endforeach
         
-        <form class="text-center" action="projets/create">@csrf<button class="btn-success btn mt-4" type="submit">create</button> </form>
+        <form class="text-center" action="projets/create">@csrf<button class="btn-success btn mt-4" type="submit">Create</button> </form>
 </div>
 @endsection

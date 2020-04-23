@@ -54,7 +54,8 @@ class ProjetController extends Controller {
 
     public function show($id) {
         $projet = Projet::find($id);
-        return view('show.showprojet',compact('projet'));
+        $task = $projet->taches;
+        return view('show.showprojet',compact('projet','task'));
     }
 
     /**

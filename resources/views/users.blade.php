@@ -1,7 +1,7 @@
 @extends('layouts.index')
 @section('content')
 <div class="container">
-        <h3 class="text-center mb-4">Registre utilisateurs</h3>
+        <h2 class="text-center mb-4">Registre utilisateurs</h2>
         @foreach ($users as $user)
         <div class="row ">
             
@@ -32,7 +32,7 @@
         </div>
         @endforeach
         
-        <form class="text-center" action="/users/create">@csrf<button class="btn-success btn mt-4" type="submit">create</button> </form>
+        <form class="text-center" action="/users/create">@csrf<button class="btn-success btn mt-4" type="submit">Create</button> </form>
 </div>
 @endsection
 

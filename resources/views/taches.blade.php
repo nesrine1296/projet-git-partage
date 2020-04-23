@@ -1,7 +1,7 @@
 @extends('layouts.index')
 @section('content')
 <div class="container">
-        <h3 class="text-center mb-4"> taches du projet </h3>
+        <h2 class="text-center mb-4">Taches du projet </h2>
         @foreach ($taches as $tache)
         <div class="row ">
             
@@ -26,7 +26,7 @@
                     <div class="col-6">
                         
                         <form  action="taches/{{$tache->id}}/edit">
-                            <button class="btn-warning btn mt-4" type="submit">update</button> 
+                            <button class="btn-warning btn mt-4" type="submit">Update</button> 
                         </form>
                         
                     </div>
@@ -35,6 +35,6 @@
         </div>
         @endforeach
         
-        <form class="text-center" action="taches/create">@csrf<button class="btn-success btn mt-4" type="submit">create</button> </form>
+        <form class="text-center" action="taches/create">@csrf<button class="btn-success btn mt-4" type="submit">Create</button> </form>
 </div>
 @endsection
