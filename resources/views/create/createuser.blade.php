@@ -1,5 +1,5 @@
 
-{{-- extends avec le section content et la tu mets les inputs et les labels --}}
+
 
 @extends('layouts.index')
 

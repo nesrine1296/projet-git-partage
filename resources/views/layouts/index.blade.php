@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item mr-2">
-              <a class="nav-link text-light" href="/users/create"> <h2>Users</h2></a>
+              <a class="nav-link text-light" href="/users"> <h2>Users</h2></a>
             </li>
             <li class="nav-item mr-2">
               <a class="nav-link text-light" href="/projets"><h2>Projets</h2></a>
