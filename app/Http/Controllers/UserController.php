@@ -48,7 +48,7 @@ class UserController extends Controller
 
         
         // return redirect('/layouts.index');
-        return redirect()->route('/users');
+        return redirect()->route('users.index');
 
     }
 
@@ -86,11 +86,15 @@ class UserController extends Controller
     public function update(Request $request, $id)
     {
         $users = User::find($id);
-        $users-> name = request('name');
-        $users-> email = request('email');
-       
+        $users->name = request('name');
+        $users->email = request('email');
+        $users->password = request('password');
+
+
+
+        
         $users->save();
-        return redirect()->route('User');
+        return redirect()->route('users.index');
     }
 
     /**

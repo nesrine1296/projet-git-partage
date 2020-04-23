@@ -4,16 +4,17 @@
 
 @section('content')
 
-<form action="/users" method="post" enctype="multipart/form-data">
+<form action="{{ route('users.update',$users->id) }}" method="post" enctype="multipart/form-data">
     @csrf
+   @method("put")
    
-    <input  value="description" type="text" name="description" id="">
-    <input  value="name" type="text" name="name" id="">
-    <input  value="email" type="text" name="email" id="">
+   
+    <input  value="{{$users->name}}" type="text" name="name" id="">
+    <input  value="{{$users->email}}" type="text" name="email" id="">
+    <input  value="{{$users->password}}" type="password" name="password" id="">
+
 
     
-    {{-- editupdate  pour le user  --}}
-{{-- adam recoit mon message  --}}
 
     
     <button type="submit">submit</button>
