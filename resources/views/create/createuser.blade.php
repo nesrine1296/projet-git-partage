@@ -8,9 +8,11 @@
 <form action="/users" method="post" enctype="multipart/form-data">
     @csrf
    
-    <input  placeholder="description" type="text" name="description" id="">
-    <input  placeholder="name" type="text" name="name" id="">
-    <input  placeholder="value" type="text" name="email" id="">
+   
+    <input  placeholder="name" type="text" name="nom" id="">
+    <input  placeholder="mail" type="text" name="email" id="">
+    <input  placeholder="password" type="password" name="password" id="">
+    
 
     
 

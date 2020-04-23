@@ -41,12 +41,17 @@ class UserController extends Controller
     {
         
         $Users = new User();
-        $Users->nom = request('nom');
-        $Users->description = request('description');
+        $Users->name = request('nom');
+        $Users->email = request('email');
+        $Users->password = request('password');
         $Users->save();
-        return redirect('/layouts.index');
+
+        
+        // return redirect('/layouts.index');
+        return redirect()->route('/users');
 
     }
+
 
     /**
      * Display the specified resource.
