@@ -26,7 +26,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+            $Users = User::all();
+            return view('create.createuser', compact("Users"));
+    
     }
 
     /**
@@ -37,7 +39,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
+        $Users = new User();
+        $Users->nom = request('nom');
+        $Users->description = request('description');
+        $Users->save();
+        return redirect('/layouts.index');
+
     }
 
     /**
