@@ -16,6 +16,5 @@ route::get('/',function(){
     return view('welcome');
 });
 route::resource("/users","UserController");
-
 route::resource("/projets","ProjetController");
 route::resource("/taches","TacheController");
