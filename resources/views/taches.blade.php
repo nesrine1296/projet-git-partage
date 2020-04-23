@@ -26,7 +26,6 @@
                     <div class="col-6">
                         
                         <form  action="taches/{{$tache->id}}/edit">
-                            @csrf
                             <button class="btn-warning btn mt-4" type="submit">update</button> 
                         </form>
                         

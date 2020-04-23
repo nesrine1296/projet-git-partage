@@ -7,12 +7,12 @@
             
             <div class="col-1 text-center">ID : {{$projet->id}} </div>
             <div class="col-3 text-center">Name : {{$projet->nom}}</div>
-            <div class="col-4 text-center">Description: {{$projet->description}} </div>
+            <div class="col-4 text-center">Description: {{$projet->description}}</div>
             <div class="col-4 text-center"> 
                 <div class="row">
                     {{-- bouton delete --}}
                     
-                    <div class="col-6">
+                    <div class="col-4">
                         <form action="projets/{{$projet->id}}" method="post">
                             @csrf
                             @method('delete')
@@ -21,11 +21,17 @@
                     </div>
                     
                     {{-- bouton update --}}
-                    <div class="col-6">
-                        
+                    <div class="col-4">
                         <form  action="projets/{{$projet->id}}/edit">
                             @csrf
                             <button class="btn-warning btn mt-4" type="submit">update</button> 
+                        </form>
+                    </div>
+                    {{-- btn show --}}
+                    <div class="col-4">
+                        <form  action="projets/{{$projet->id}}">
+                            @csrf
+                            <button class="btn-primary btn mt-4" type="submit">show</button> 
                         </form>
                     </div>
                 </div>

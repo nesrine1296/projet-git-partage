@@ -12,8 +12,9 @@
     <input  value="email" type="text" name="email" id="">
 
     
-
+    {{-- editupdate  pour le user  --}}
 {{-- adam recoit mon message  --}}
+
     
     <button type="submit">submit</button>
    <div class="form-group">

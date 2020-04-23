@@ -52,8 +52,9 @@ class ProjetController extends Controller {
     * @return \Illuminate\Http\Response
     */
 
-    public function show( Projet $projet ) {
-        //
+    public function show($id) {
+        $projet = Projet::find($id);
+        return view('show.showprojet',compact('projet'));
     }
 
     /**
